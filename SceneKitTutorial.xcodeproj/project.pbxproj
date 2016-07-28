@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		780EB4FD1D4501CD00264EB8 /* world.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB4FC1D4501CD00264EB8 /* world.jpg */; };
 		780EB5031D450DDF00264EB8 /* stone-wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB5021D450DDF00264EB8 /* stone-wall.jpg */; };
 		780EB5071D4583E600264EB8 /* blue-sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB5061D4583E600264EB8 /* blue-sky.jpg */; };
 		7860F5B01D422A89007E138C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860F5AF1D422A89007E138C /* AppDelegate.swift */; };
@@ -17,14 +16,20 @@
 		7860F5BA1D422A89007E138C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7860F5B81D422A89007E138C /* LaunchScreen.storyboard */; };
 		7860F5C21D422AA0007E138C /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7860F5C11D422AA0007E138C /* SceneKit.framework */; };
 		7860F5C41D422B88007E138C /* PrimitivesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860F5C31D422B88007E138C /* PrimitivesScene.swift */; };
-		7860F5C61D4245E5007E138C /* sinon.dae in Resources */ = {isa = PBXBuildFile; fileRef = 7860F5C51D4245E5007E138C /* sinon.dae */; };
+		78612DFE1D4A7B2D008390B6 /* wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78612DFD1D4A7B2D008390B6 /* wood.jpg */; };
+		78612E001D4A7B55008390B6 /* sinon.dae in Resources */ = {isa = PBXBuildFile; fileRef = 78612DFF1D4A7B55008390B6 /* sinon.dae */; };
+		78612E041D4A7C9C008390B6 /* Charizard.obj in Resources */ = {isa = PBXBuildFile; fileRef = 78612E031D4A7C9C008390B6 /* Charizard.obj */; };
+		78612E0A1D4A7CC3008390B6 /* lizardon_0_0.tga in Resources */ = {isa = PBXBuildFile; fileRef = 78612E051D4A7CC3008390B6 /* lizardon_0_0.tga */; };
+		78612E0B1D4A7CC3008390B6 /* lizardon_1_0.tga in Resources */ = {isa = PBXBuildFile; fileRef = 78612E061D4A7CC3008390B6 /* lizardon_1_0.tga */; };
+		78612E0C1D4A7CC3008390B6 /* LizardonDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = 78612E071D4A7CC3008390B6 /* LizardonDh.tga */; };
+		78612E0D1D4A7CC3008390B6 /* LizardonEyeDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = 78612E081D4A7CC3008390B6 /* LizardonEyeDh.tga */; };
+		78612E0E1D4A7CC4008390B6 /* LizardonFireWP.tga in Resources */ = {isa = PBXBuildFile; fileRef = 78612E091D4A7CC3008390B6 /* LizardonFireWP.tga */; };
 		786E057E1D48F7B3004F6525 /* Pokeball.dae in Resources */ = {isa = PBXBuildFile; fileRef = 786E057D1D48F7B3004F6525 /* Pokeball.dae */; };
 		7898233D1D478DD800FCFE04 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = 7898233C1D478DD800FCFE04 /* football.png */; };
 		7898236E1D4813D600FCFE04 /* goal-rect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7898236D1D4813D600FCFE04 /* goal-rect.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		780EB4FC1D4501CD00264EB8 /* world.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world.jpg; path = ../../../../../../Downloads/world.jpg; sourceTree = "<group>"; };
 		780EB5021D450DDF00264EB8 /* stone-wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "stone-wall.jpg"; path = "SceneKitTutorial/stone-wall.jpg"; sourceTree = "<group>"; };
 		780EB5061D4583E600264EB8 /* blue-sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blue-sky.jpg"; sourceTree = "<group>"; };
 		7860F5AC1D422A89007E138C /* SceneKitTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,7 +41,14 @@
 		7860F5BB1D422A89007E138C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7860F5C11D422AA0007E138C /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		7860F5C31D422B88007E138C /* PrimitivesScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitivesScene.swift; sourceTree = "<group>"; };
-		7860F5C51D4245E5007E138C /* sinon.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = sinon.dae; path = ../../sinon.dae; sourceTree = "<group>"; };
+		78612DFD1D4A7B2D008390B6 /* wood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wood.jpg; path = SceneKitTutorial/wood.jpg; sourceTree = "<group>"; };
+		78612DFF1D4A7B55008390B6 /* sinon.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = sinon.dae; sourceTree = "<group>"; };
+		78612E031D4A7C9C008390B6 /* Charizard.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Charizard.obj; path = SceneKitTutorial/Charizard.obj; sourceTree = "<group>"; };
+		78612E051D4A7CC3008390B6 /* lizardon_0_0.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = lizardon_0_0.tga; path = SceneKitTutorial/charizardTextures/lizardon_0_0.tga; sourceTree = "<group>"; };
+		78612E061D4A7CC3008390B6 /* lizardon_1_0.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = lizardon_1_0.tga; path = SceneKitTutorial/charizardTextures/lizardon_1_0.tga; sourceTree = "<group>"; };
+		78612E071D4A7CC3008390B6 /* LizardonDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = LizardonDh.tga; path = SceneKitTutorial/charizardTextures/LizardonDh.tga; sourceTree = "<group>"; };
+		78612E081D4A7CC3008390B6 /* LizardonEyeDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = LizardonEyeDh.tga; path = SceneKitTutorial/charizardTextures/LizardonEyeDh.tga; sourceTree = "<group>"; };
+		78612E091D4A7CC3008390B6 /* LizardonFireWP.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = LizardonFireWP.tga; path = SceneKitTutorial/charizardTextures/LizardonFireWP.tga; sourceTree = "<group>"; };
 		786E057D1D48F7B3004F6525 /* Pokeball.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Pokeball.dae; sourceTree = "<group>"; };
 		7898233C1D478DD800FCFE04 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		7898236D1D4813D600FCFE04 /* goal-rect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "goal-rect.jpg"; sourceTree = "<group>"; };
@@ -57,8 +69,14 @@
 		7860F5A31D422A89007E138C = {
 			isa = PBXGroup;
 			children = (
+				78612E031D4A7C9C008390B6 /* Charizard.obj */,
+				78612E051D4A7CC3008390B6 /* lizardon_0_0.tga */,
+				78612E061D4A7CC3008390B6 /* lizardon_1_0.tga */,
+				78612E071D4A7CC3008390B6 /* LizardonDh.tga */,
+				78612E081D4A7CC3008390B6 /* LizardonEyeDh.tga */,
+				78612E091D4A7CC3008390B6 /* LizardonFireWP.tga */,
 				780EB5021D450DDF00264EB8 /* stone-wall.jpg */,
-				780EB4FC1D4501CD00264EB8 /* world.jpg */,
+				78612DFD1D4A7B2D008390B6 /* wood.jpg */,
 				7860F5C11D422AA0007E138C /* SceneKit.framework */,
 				7860F5AE1D422A89007E138C /* SceneKitTutorial */,
 				7860F5AD1D422A89007E138C /* Products */,
@@ -84,7 +102,7 @@
 				7898236D1D4813D600FCFE04 /* goal-rect.jpg */,
 				7898233C1D478DD800FCFE04 /* football.png */,
 				780EB5061D4583E600264EB8 /* blue-sky.jpg */,
-				7860F5C51D4245E5007E138C /* sinon.dae */,
+				78612DFF1D4A7B55008390B6 /* sinon.dae */,
 				7860F5B61D422A89007E138C /* Assets.xcassets */,
 				7860F5B81D422A89007E138C /* LaunchScreen.storyboard */,
 				7860F5BB1D422A89007E138C /* Info.plist */,
@@ -152,14 +170,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7898233D1D478DD800FCFE04 /* football.png in Resources */,
+				78612E041D4A7C9C008390B6 /* Charizard.obj in Resources */,
 				7860F5BA1D422A89007E138C /* LaunchScreen.storyboard in Resources */,
+				78612E0A1D4A7CC3008390B6 /* lizardon_0_0.tga in Resources */,
 				7860F5B71D422A89007E138C /* Assets.xcassets in Resources */,
 				780EB5031D450DDF00264EB8 /* stone-wall.jpg in Resources */,
 				786E057E1D48F7B3004F6525 /* Pokeball.dae in Resources */,
 				7860F5B51D422A89007E138C /* Main.storyboard in Resources */,
-				7860F5C61D4245E5007E138C /* sinon.dae in Resources */,
-				780EB4FD1D4501CD00264EB8 /* world.jpg in Resources */,
+				78612E001D4A7B55008390B6 /* sinon.dae in Resources */,
+				78612E0C1D4A7CC3008390B6 /* LizardonDh.tga in Resources */,
+				78612E0B1D4A7CC3008390B6 /* lizardon_1_0.tga in Resources */,
+				78612DFE1D4A7B2D008390B6 /* wood.jpg in Resources */,
+				78612E0E1D4A7CC4008390B6 /* LizardonFireWP.tga in Resources */,
 				7898236E1D4813D600FCFE04 /* goal-rect.jpg in Resources */,
+				78612E0D1D4A7CC3008390B6 /* LizardonEyeDh.tga in Resources */,
 				780EB5071D4583E600264EB8 /* blue-sky.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

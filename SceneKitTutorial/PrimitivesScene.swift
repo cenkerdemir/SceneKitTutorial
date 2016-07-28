@@ -134,6 +134,8 @@ class PrimitivesScene: SCNScene {
     
         //sinonNode.orientation = SCNQuaternion(x: -0.26, y: -0.32, z: 0, w: 0.91)
         
+       
+        
     }
     
     required init(coder aDecoder: NSCoder) {
