@@ -13,20 +13,18 @@ class ViewController: UIViewController {
     
     var scnView = SCNView()
     var primScn = PrimitivesScene()
-    let swipeRecognizer = UISwipeGestureRecognizer()
+    let swipeRecognizer = UIPanGestureRecognizer()
+    var velocity = CGPoint()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         scnView = self.view as! SCNView
-        
         scnView.scene = primScn
         
-        swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Up
         swipeRecognizer.addTarget(self, action: #selector(sceneSwiped))
         scnView.addGestureRecognizer(swipeRecognizer)
-        
         
         //scnView.backgroundColor = UIColor.lightGrayColor()
         //scnView.autoenablesDefaultLighting = true
@@ -39,8 +37,9 @@ class ViewController: UIViewController {
     }
     
     func sceneSwiped(recognizer: UISwipeGestureRecognizer) {
-        print("swiped up!")
-        primScn.shootTheBall(primScn.sphereNode)
+        self.velocity = swipeRecognizer.velocityInView(scnView)
+        //print("velocityX:\(self.velocity.x) velocityY:\(self.velocity.y)")
+        primScn.shootTheBall(primScn.sphereNode, velocity: self.velocity)
     }
 }
 
