@@ -16,7 +16,7 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
     var myFloorNode = SCNNode()
     var sphereNode = SCNNode()
     
-    var secondNode = SCNNode()
+    //var secondNode = SCNNode()
     let sinonNode = SCNNode()
     let light = SCNNode()
     let cameraNode: SCNNode = SCNNode()
@@ -24,8 +24,10 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
     //moves/animations
     let moveUp = SCNAction.moveByX(0.0, y: 1.0, z: -5.0, duration: 0.5)
     let moveDown = SCNAction.moveByX(0.0, y: -1.0, z: 0.0, duration: 0.5)
-    let moveFwd1 = SCNAction.moveTo(SCNVector3( x:0, y: 4, z:-30), duration: 0.5)
+    let moveFwd1 = SCNAction.moveTo(SCNVector3( x:0, y: 4, z:-15), duration: 0.5)
     let moveFwd2 = SCNAction.moveTo(SCNVector3(x:0,y: 0.1, z:-30), duration: 0.5)
+    let moveFwd3 = SCNAction.moveTo(SCNVector3(x:0, y:-4,z:-5), duration: 0.5)
+    let moveFwd4 = SCNAction.moveTo(SCNVector3(x:0.0, y:0.25,z:13), duration: 0.5)
     var sequence = SCNAction()
     let spin = SCNAction.rotateByAngle(90, aroundAxis: SCNVector3(0.0,0.0,-5.0), duration: 0.5)
     let moveMe = CABasicAnimation(keyPath: "position.x")
@@ -100,12 +102,11 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
         self.sphereNode.position = SCNVector3(0.0, 0.25,13)
         self.rootNode.addChildNode(self.sphereNode)
         
+//        self.secondNode = SCNNode(geometry: sphereGeometry)
+//        self.secondNode.position = SCNVector3(0.0, 0.25,13)
+//        self.rootNode.addChildNode(self.secondNode)
         
-        self.secondNode = SCNNode(geometry: sphereGeometry)
-        self.secondNode.position = SCNVector3(0.0, 0.25,13)
-        self.rootNode.addChildNode(self.secondNode)
-        
-        self.sequence = SCNAction.sequence([moveFwd1, moveFwd2])
+        self.sequence = SCNAction.sequence([moveFwd1, moveFwd2,moveFwd3, moveFwd4])
         //let repeatedSequence = SCNAction.repeatAction(sequence, count: 1)
         
         
@@ -139,7 +140,7 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
 //        self.rootNode.addChildNode(pipe3Node)
 //
         //sinon character
-        let scene = SCNScene(named: "tree-new.dae")
+        let scene = SCNScene(named: "pik.dae")
         let nodeArray = scene!.rootNode.childNodes
         for childNode in nodeArray {
             sinonNode.addChildNode(childNode)
