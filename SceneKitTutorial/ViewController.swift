@@ -9,7 +9,7 @@
 import UIKit
 import SceneKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SCNPhysicsContactDelegate {
     
     var scnView = SCNView()
     var primScn = PrimitivesScene()
@@ -26,9 +26,9 @@ class ViewController: UIViewController {
         swipeRecognizer.addTarget(self, action: #selector(sceneSwiped))
         scnView.addGestureRecognizer(swipeRecognizer)
         
-        //scnView.backgroundColor = UIColor.lightGrayColor()
-        //scnView.autoenablesDefaultLighting = true
-        //scnView.allowsCameraControl = true
+        primScn.physicsWorld.contactDelegate = self
+        
+//        scnView.allowsCameraControl = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,8 +38,21 @@ class ViewController: UIViewController {
     
     func sceneSwiped(recognizer: UISwipeGestureRecognizer) {
         self.velocity = swipeRecognizer.velocityInView(scnView)
-        //print("velocityX:\(self.velocity.x) velocityY:\(self.velocity.y)")
         primScn.shootTheBall(primScn.sphereNode, velocity: self.velocity)
     }
+
+    func physicsWorld(world: SCNPhysicsWorld, didUpdateContact contact: SCNPhysicsContact) {
+        if (contact.nodeA == primScn.sphereNode || contact.nodeA == primScn.pokeNode) && (contact.nodeB == primScn.sphereNode || contact.nodeB == primScn.pokeNode) {
+            let particleSystem = SCNParticleSystem(named: "Explosion", inDirectory: nil)
+            let systemNode = SCNNode()
+            systemNode.addParticleSystem(particleSystem!)
+            systemNode.position = contact.nodeA.position
+            primScn.rootNode.addChildNode(systemNode)
+            
+            contact.nodeA.removeFromParentNode()
+            contact.nodeB.removeFromParentNode()
+        }
+    }
+
 }
 

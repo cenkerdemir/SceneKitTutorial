@@ -17,7 +17,7 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
     var sphereNode = SCNNode()
     
     //var secondNode = SCNNode()
-    let sinonNode = SCNNode()
+    let pokeNode = SCNNode()
     let light = SCNNode()
     let cameraNode: SCNNode = SCNNode()
     
@@ -26,11 +26,12 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
     let moveDown = SCNAction.moveByX(0.0, y: -1.0, z: 0.0, duration: 0.5)
     let moveFwd1 = SCNAction.moveTo(SCNVector3( x:0, y: 4, z:-15), duration: 0.5)
     let moveFwd2 = SCNAction.moveTo(SCNVector3(x:0,y: 0.1, z:-30), duration: 0.5)
-    let moveFwd3 = SCNAction.moveTo(SCNVector3(x:0, y:-4,z:-5), duration: 0.5)
-    let moveFwd4 = SCNAction.moveTo(SCNVector3(x:0.0, y:0.25,z:13), duration: 0.5)
+    let moveFwd3 = SCNAction.moveTo(SCNVector3(x:0, y:-4,z:-5), duration: 0.2)
+    let moveFwd4 = SCNAction.moveTo(SCNVector3(x:0.0, y:0.25,z:13), duration: 0.2)
     var sequence = SCNAction()
     let spin = SCNAction.rotateByAngle(90, aroundAxis: SCNVector3(0.0,0.0,-5.0), duration: 0.5)
-    let moveMe = CABasicAnimation(keyPath: "position.x")
+    let moveMeOnX = CABasicAnimation(keyPath: "position.x")
+//    let moveMeOnY = CABasicAnimation(keyPath: "position.y")
     
     //let swipeRecognizer = UIPanGestureRecognizer()
     
@@ -57,7 +58,7 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
         myFloorNode = self.makeFloor()
         self.rootNode.addChildNode(myFloorNode)
         
-        let lookAt = SCNLookAtConstraint(target: sinonNode)
+        let lookAt = SCNLookAtConstraint(target: pokeNode)
         lookAt.gimbalLockEnabled = true
         
         //ambient light
@@ -76,13 +77,16 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
         spot.zFar = 250
         let spotNode = SCNNode()
         spotNode.light = spot
-        spotNode.position = SCNVector3(x: 4, y: 10, z: 25)
+        spotNode.position = SCNVector3(x: 20, y: 20, z: 30)
         spotNode.constraints = [lookAt]
         self.rootNode.addChildNode(spotNode)
         
-        moveMe.byValue = -20
-        moveMe.duration = 7.0
-        cameraNode.addAnimation(moveMe, forKey: "slide right")
+        moveMeOnX.byValue = -20
+        moveMeOnX.duration = 8
+        cameraNode.addAnimation(moveMeOnX, forKey: "slide right")
+//        moveMeOnY.byValue = 10
+//        moveMeOnY.duration = 4
+//        cameraNode.addAnimation(moveMeOnY, forKey: "slide up")
         
         //camera node
         cameraNode.camera = SCNCamera()
@@ -93,7 +97,7 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
         cameraNode.constraints = [lookAt]
         self.rootNode.addChildNode(cameraNode)
         
-        let sphereGeometry = SCNSphere(radius: 0.25)
+        let sphereGeometry = SCNSphere(radius: 0.3)
         sphereGeometry.firstMaterial?.diffuse.contents = UIImage(named: "pokeball.png")
         sphereGeometry.firstMaterial?.lightingModelName = SCNLightingModelBlinn
         
@@ -139,20 +143,20 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
 //        pipe3Node.position = SCNVector3(0, 2.0, -25.0)
 //        self.rootNode.addChildNode(pipe3Node)
 //
-        //sinon character
+        //pokemon character
         let scene = SCNScene(named: "pik.dae")
         let nodeArray = scene!.rootNode.childNodes
         for childNode in nodeArray {
-            sinonNode.addChildNode(childNode)
+            pokeNode.addChildNode(childNode)
         }
-        self.rootNode.addChildNode(sinonNode)
-        sinonNode.position = SCNVector3(x: 0.0, y: -0.01, z: -20.0)
-        //sinonNode.physicsBody?.applyForce( SCNVector3Make( 0, 2, 0), impulse: true)
+        self.rootNode.addChildNode(pokeNode)
+        pokeNode.position = SCNVector3(x: 0.0, y: -0.01, z: -20.0)
+        //pokeNode.physicsBody?.applyForce( SCNVector3Make( 0, 2, 0), impulse: true)
         
-        //swipeRecognizer.addTarget(sphereNode, action: #selector(shootTheBall))
+        //pokeNode.orientation = SCNQuaternion(x: -0.26, y: -0.32, z: 0, w: 0.91)
         
-        //sinonNode.orientation = SCNQuaternion(x: -0.26, y: -0.32, z: 0, w: 0.91)
-        
+        //trees
+
     }
     
     required init(coder aDecoder: NSCoder) {

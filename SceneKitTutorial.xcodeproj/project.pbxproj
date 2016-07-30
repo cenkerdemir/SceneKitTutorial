@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780B0A4C1D4D4143003A2DDC /* pik2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 780B0A4B1D4D4143003A2DDC /* pik2.dae */; };
+		780B0A4E1D4D47EC003A2DDC /* charizard.dae in Resources */ = {isa = PBXBuildFile; fileRef = 780B0A4D1D4D47EC003A2DDC /* charizard.dae */; };
+		780B0A551D4D4D71003A2DDC /* Explosion.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 780B0A531D4D4D71003A2DDC /* Explosion.scnp */; };
+		780B0A561D4D4D71003A2DDC /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 780B0A541D4D4D71003A2DDC /* spark.png */; };
 		780EB5031D450DDF00264EB8 /* stone-wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB5021D450DDF00264EB8 /* stone-wall.jpg */; };
 		780EB5071D4583E600264EB8 /* blue-sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB5061D4583E600264EB8 /* blue-sky.jpg */; };
+		782E69A51D4D312A00D207CB /* BR_Bulbasaur.png in Resources */ = {isa = PBXBuildFile; fileRef = 782E69A41D4D312A00D207CB /* BR_Bulbasaur.png */; };
+		782E69A71D4D32B700D207CB /* bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png in Resources */ = {isa = PBXBuildFile; fileRef = 782E69A61D4D32B700D207CB /* bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png */; };
 		7860F5B01D422A89007E138C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860F5AF1D422A89007E138C /* AppDelegate.swift */; };
 		7860F5B21D422A89007E138C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860F5B11D422A89007E138C /* ViewController.swift */; };
 		7860F5B51D422A89007E138C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7860F5B31D422A89007E138C /* Main.storyboard */; };
@@ -25,21 +31,32 @@
 		78612E0E1D4A7CC4008390B6 /* LizardonFireWP.tga in Resources */ = {isa = PBXBuildFile; fileRef = 78612E091D4A7CC3008390B6 /* LizardonFireWP.tga */; };
 		78612E111D4AB015008390B6 /* pokeball.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E101D4AB015008390B6 /* pokeball.png */; };
 		78612E151D4B8ACF008390B6 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E141D4B8ACF008390B6 /* green.png */; };
-		78612E281D4BC2B4008390B6 /* PikachuEnvNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E1D1D4BC2B4008390B6 /* PikachuEnvNl.png */; };
-		78612E291D4BC2B4008390B6 /* PikachuEyeNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E1E1D4BC2B4008390B6 /* PikachuEyeNl.png */; };
-		78612E2A1D4BC2B4008390B6 /* PikachuHohoNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E1F1D4BC2B4008390B6 /* PikachuHohoNl.png */; };
-		78612E2B1D4BC2B4008390B6 /* PikachuMouthNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E201D4BC2B4008390B6 /* PikachuMouthNl.png */; };
-		78612E2C1D4BC2B4008390B6 /* PikachuNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E211D4BC2B4008390B6 /* PikachuNl.png */; };
-		78612E2D1D4BC2B4008390B6 /* PikachuSpecularNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E221D4BC2B4008390B6 /* PikachuSpecularNl.png */; };
 		78612E2F1D4BC4A8008390B6 /* pik.dae in Resources */ = {isa = PBXBuildFile; fileRef = 78612E2E1D4BC4A8008390B6 /* pik.dae */; };
-		78612E3D1D4BDEA4008390B6 /* tree-new.dae in Resources */ = {isa = PBXBuildFile; fileRef = 78612E3C1D4BDEA4008390B6 /* tree-new.dae */; };
+		78612E461D4D0EDD008390B6 /* PikachuEnvNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E401D4D0EDD008390B6 /* PikachuEnvNl.png */; };
+		78612E471D4D0EDD008390B6 /* PikachuEyeNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E411D4D0EDD008390B6 /* PikachuEyeNl.png */; };
+		78612E481D4D0EDD008390B6 /* PikachuHohoNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E421D4D0EDD008390B6 /* PikachuHohoNl.png */; };
+		78612E491D4D0EDD008390B6 /* PikachuMouthNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E431D4D0EDD008390B6 /* PikachuMouthNl.png */; };
+		78612E4A1D4D0EDD008390B6 /* PikachuNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E441D4D0EDD008390B6 /* PikachuNl.png */; };
+		78612E4B1D4D0EDD008390B6 /* PikachuSpecularNl.png in Resources */ = {isa = PBXBuildFile; fileRef = 78612E451D4D0EDD008390B6 /* PikachuSpecularNl.png */; };
+		786980621D4D2FB400D1DF56 /* bulb.dae in Resources */ = {isa = PBXBuildFile; fileRef = 7869805B1D4D2FB400D1DF56 /* bulb.dae */; };
+		786980631D4D2FB400D1DF56 /* fushigidane_0_0.tga in Resources */ = {isa = PBXBuildFile; fileRef = 7869805C1D4D2FB400D1DF56 /* fushigidane_0_0.tga */; };
+		786980641D4D2FB400D1DF56 /* fushigidane_0_1.tga in Resources */ = {isa = PBXBuildFile; fileRef = 7869805D1D4D2FB400D1DF56 /* fushigidane_0_1.tga */; };
+		786980651D4D2FB400D1DF56 /* fushigidane_1_0.tga in Resources */ = {isa = PBXBuildFile; fileRef = 7869805E1D4D2FB400D1DF56 /* fushigidane_1_0.tga */; };
+		786980661D4D2FB400D1DF56 /* fushigidane_1_1.tga in Resources */ = {isa = PBXBuildFile; fileRef = 7869805F1D4D2FB400D1DF56 /* fushigidane_1_1.tga */; };
+		786980671D4D2FB400D1DF56 /* FushigidaneDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = 786980601D4D2FB400D1DF56 /* FushigidaneDh.tga */; };
+		786980681D4D2FB400D1DF56 /* FushigidaneEyeDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = 786980611D4D2FB400D1DF56 /* FushigidaneEyeDh.tga */; };
 		7898233D1D478DD800FCFE04 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = 7898233C1D478DD800FCFE04 /* football.png */; };
-		7898236E1D4813D600FCFE04 /* goal-rect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7898236D1D4813D600FCFE04 /* goal-rect.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		780B0A4B1D4D4143003A2DDC /* pik2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = pik2.dae; path = "../../../Downloads/All Pokemon/025 - Pikachu/pik2.dae"; sourceTree = "<group>"; };
+		780B0A4D1D4D47EC003A2DDC /* charizard.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = charizard.dae; path = SceneKitTutorial/charizard.dae; sourceTree = "<group>"; };
+		780B0A531D4D4D71003A2DDC /* Explosion.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = Explosion.scnp; path = ../../Explosion.scnp; sourceTree = "<group>"; };
+		780B0A541D4D4D71003A2DDC /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../../spark.png; sourceTree = "<group>"; };
 		780EB5021D450DDF00264EB8 /* stone-wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "stone-wall.jpg"; path = "SceneKitTutorial/stone-wall.jpg"; sourceTree = "<group>"; };
 		780EB5061D4583E600264EB8 /* blue-sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blue-sky.jpg"; sourceTree = "<group>"; };
+		782E69A41D4D312A00D207CB /* BR_Bulbasaur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BR_Bulbasaur.png; path = SceneKitTutorial/bulbasaur/BR_Bulbasaur.png; sourceTree = "<group>"; };
+		782E69A61D4D32B700D207CB /* bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png"; path = "SceneKitTutorial/bulbasaur/bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png"; sourceTree = "<group>"; };
 		7860F5AC1D422A89007E138C /* SceneKitTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7860F5AF1D422A89007E138C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7860F5B11D422A89007E138C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,16 +75,21 @@
 		78612E091D4A7CC3008390B6 /* LizardonFireWP.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = LizardonFireWP.tga; path = SceneKitTutorial/charizardTextures/LizardonFireWP.tga; sourceTree = "<group>"; };
 		78612E101D4AB015008390B6 /* pokeball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pokeball.png; sourceTree = "<group>"; };
 		78612E141D4B8ACF008390B6 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
-		78612E1D1D4BC2B4008390B6 /* PikachuEnvNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PikachuEnvNl.png; sourceTree = "<group>"; };
-		78612E1E1D4BC2B4008390B6 /* PikachuEyeNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PikachuEyeNl.png; sourceTree = "<group>"; };
-		78612E1F1D4BC2B4008390B6 /* PikachuHohoNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PikachuHohoNl.png; sourceTree = "<group>"; };
-		78612E201D4BC2B4008390B6 /* PikachuMouthNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PikachuMouthNl.png; sourceTree = "<group>"; };
-		78612E211D4BC2B4008390B6 /* PikachuNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PikachuNl.png; sourceTree = "<group>"; };
-		78612E221D4BC2B4008390B6 /* PikachuSpecularNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PikachuSpecularNl.png; sourceTree = "<group>"; };
 		78612E2E1D4BC4A8008390B6 /* pik.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = pik.dae; sourceTree = "<group>"; };
-		78612E3C1D4BDEA4008390B6 /* tree-new.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = "tree-new.dae"; path = "../../../Downloads/tree-new.dae"; sourceTree = "<group>"; };
+		78612E401D4D0EDD008390B6 /* PikachuEnvNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PikachuEnvNl.png; path = SceneKitTutorial/PikachuEnvNl.png; sourceTree = "<group>"; };
+		78612E411D4D0EDD008390B6 /* PikachuEyeNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PikachuEyeNl.png; path = SceneKitTutorial/PikachuEyeNl.png; sourceTree = "<group>"; };
+		78612E421D4D0EDD008390B6 /* PikachuHohoNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PikachuHohoNl.png; path = SceneKitTutorial/PikachuHohoNl.png; sourceTree = "<group>"; };
+		78612E431D4D0EDD008390B6 /* PikachuMouthNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PikachuMouthNl.png; path = SceneKitTutorial/PikachuMouthNl.png; sourceTree = "<group>"; };
+		78612E441D4D0EDD008390B6 /* PikachuNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PikachuNl.png; path = SceneKitTutorial/PikachuNl.png; sourceTree = "<group>"; };
+		78612E451D4D0EDD008390B6 /* PikachuSpecularNl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PikachuSpecularNl.png; path = SceneKitTutorial/PikachuSpecularNl.png; sourceTree = "<group>"; };
+		7869805B1D4D2FB400D1DF56 /* bulb.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = bulb.dae; path = SceneKitTutorial/bulbasaur/bulb.dae; sourceTree = "<group>"; };
+		7869805C1D4D2FB400D1DF56 /* fushigidane_0_0.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = fushigidane_0_0.tga; path = SceneKitTutorial/bulbasaur/fushigidane_0_0.tga; sourceTree = "<group>"; };
+		7869805D1D4D2FB400D1DF56 /* fushigidane_0_1.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = fushigidane_0_1.tga; path = SceneKitTutorial/bulbasaur/fushigidane_0_1.tga; sourceTree = "<group>"; };
+		7869805E1D4D2FB400D1DF56 /* fushigidane_1_0.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = fushigidane_1_0.tga; path = SceneKitTutorial/bulbasaur/fushigidane_1_0.tga; sourceTree = "<group>"; };
+		7869805F1D4D2FB400D1DF56 /* fushigidane_1_1.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = fushigidane_1_1.tga; path = SceneKitTutorial/bulbasaur/fushigidane_1_1.tga; sourceTree = "<group>"; };
+		786980601D4D2FB400D1DF56 /* FushigidaneDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = FushigidaneDh.tga; path = SceneKitTutorial/bulbasaur/FushigidaneDh.tga; sourceTree = "<group>"; };
+		786980611D4D2FB400D1DF56 /* FushigidaneEyeDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = FushigidaneEyeDh.tga; path = SceneKitTutorial/bulbasaur/FushigidaneEyeDh.tga; sourceTree = "<group>"; };
 		7898233C1D478DD800FCFE04 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
-		7898236D1D4813D600FCFE04 /* goal-rect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "goal-rect.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +107,25 @@
 		7860F5A31D422A89007E138C = {
 			isa = PBXGroup;
 			children = (
-				78612E3C1D4BDEA4008390B6 /* tree-new.dae */,
+				780B0A531D4D4D71003A2DDC /* Explosion.scnp */,
+				780B0A541D4D4D71003A2DDC /* spark.png */,
+				780B0A4B1D4D4143003A2DDC /* pik2.dae */,
+				7869805B1D4D2FB400D1DF56 /* bulb.dae */,
+				780B0A4D1D4D47EC003A2DDC /* charizard.dae */,
+				782E69A61D4D32B700D207CB /* bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png */,
+				782E69A41D4D312A00D207CB /* BR_Bulbasaur.png */,
+				7869805C1D4D2FB400D1DF56 /* fushigidane_0_0.tga */,
+				7869805D1D4D2FB400D1DF56 /* fushigidane_0_1.tga */,
+				7869805E1D4D2FB400D1DF56 /* fushigidane_1_0.tga */,
+				7869805F1D4D2FB400D1DF56 /* fushigidane_1_1.tga */,
+				786980601D4D2FB400D1DF56 /* FushigidaneDh.tga */,
+				786980611D4D2FB400D1DF56 /* FushigidaneEyeDh.tga */,
+				78612E401D4D0EDD008390B6 /* PikachuEnvNl.png */,
+				78612E411D4D0EDD008390B6 /* PikachuEyeNl.png */,
+				78612E421D4D0EDD008390B6 /* PikachuHohoNl.png */,
+				78612E431D4D0EDD008390B6 /* PikachuMouthNl.png */,
+				78612E441D4D0EDD008390B6 /* PikachuNl.png */,
+				78612E451D4D0EDD008390B6 /* PikachuSpecularNl.png */,
 				78612E051D4A7CC3008390B6 /* lizardon_0_0.tga */,
 				78612E061D4A7CC3008390B6 /* lizardon_1_0.tga */,
 				78612E071D4A7CC3008390B6 /* LizardonDh.tga */,
@@ -112,18 +152,11 @@
 			children = (
 				7860F5AF1D422A89007E138C /* AppDelegate.swift */,
 				7860F5B11D422A89007E138C /* ViewController.swift */,
-				78612E1D1D4BC2B4008390B6 /* PikachuEnvNl.png */,
-				78612E1E1D4BC2B4008390B6 /* PikachuEyeNl.png */,
-				78612E1F1D4BC2B4008390B6 /* PikachuHohoNl.png */,
-				78612E201D4BC2B4008390B6 /* PikachuMouthNl.png */,
-				78612E211D4BC2B4008390B6 /* PikachuNl.png */,
-				78612E221D4BC2B4008390B6 /* PikachuSpecularNl.png */,
 				7860F5B31D422A89007E138C /* Main.storyboard */,
 				7860F5C31D422B88007E138C /* PrimitivesScene.swift */,
 				78612E2E1D4BC4A8008390B6 /* pik.dae */,
 				78612E141D4B8ACF008390B6 /* green.png */,
 				78612E101D4AB015008390B6 /* pokeball.png */,
-				7898236D1D4813D600FCFE04 /* goal-rect.jpg */,
 				7898233C1D478DD800FCFE04 /* football.png */,
 				780EB5061D4583E600264EB8 /* blue-sky.jpg */,
 				78612DFF1D4A7B55008390B6 /* sinon.dae */,
@@ -194,29 +227,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				7898233D1D478DD800FCFE04 /* football.png in Resources */,
+				78612E491D4D0EDD008390B6 /* PikachuMouthNl.png in Resources */,
+				786980631D4D2FB400D1DF56 /* fushigidane_0_0.tga in Resources */,
 				7860F5BA1D422A89007E138C /* LaunchScreen.storyboard in Resources */,
 				78612E0A1D4A7CC3008390B6 /* lizardon_0_0.tga in Resources */,
 				7860F5B71D422A89007E138C /* Assets.xcassets in Resources */,
-				78612E3D1D4BDEA4008390B6 /* tree-new.dae in Resources */,
 				780EB5031D450DDF00264EB8 /* stone-wall.jpg in Resources */,
 				7860F5B51D422A89007E138C /* Main.storyboard in Resources */,
 				78612E001D4A7B55008390B6 /* sinon.dae in Resources */,
 				78612E111D4AB015008390B6 /* pokeball.png in Resources */,
-				78612E2D1D4BC2B4008390B6 /* PikachuSpecularNl.png in Resources */,
+				780B0A561D4D4D71003A2DDC /* spark.png in Resources */,
+				786980671D4D2FB400D1DF56 /* FushigidaneDh.tga in Resources */,
+				78612E4A1D4D0EDD008390B6 /* PikachuNl.png in Resources */,
+				786980681D4D2FB400D1DF56 /* FushigidaneEyeDh.tga in Resources */,
 				78612E0C1D4A7CC3008390B6 /* LizardonDh.tga in Resources */,
-				78612E281D4BC2B4008390B6 /* PikachuEnvNl.png in Resources */,
+				78612E471D4D0EDD008390B6 /* PikachuEyeNl.png in Resources */,
+				782E69A51D4D312A00D207CB /* BR_Bulbasaur.png in Resources */,
+				78612E461D4D0EDD008390B6 /* PikachuEnvNl.png in Resources */,
 				78612E0B1D4A7CC3008390B6 /* lizardon_1_0.tga in Resources */,
 				78612DFE1D4A7B2D008390B6 /* wood.jpg in Resources */,
+				780B0A551D4D4D71003A2DDC /* Explosion.scnp in Resources */,
 				78612E0E1D4A7CC4008390B6 /* LizardonFireWP.tga in Resources */,
-				7898236E1D4813D600FCFE04 /* goal-rect.jpg in Resources */,
+				786980661D4D2FB400D1DF56 /* fushigidane_1_1.tga in Resources */,
+				780B0A4E1D4D47EC003A2DDC /* charizard.dae in Resources */,
+				78612E481D4D0EDD008390B6 /* PikachuHohoNl.png in Resources */,
+				780B0A4C1D4D4143003A2DDC /* pik2.dae in Resources */,
+				782E69A71D4D32B700D207CB /* bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png in Resources */,
 				78612E151D4B8ACF008390B6 /* green.png in Resources */,
-				78612E2C1D4BC2B4008390B6 /* PikachuNl.png in Resources */,
+				786980651D4D2FB400D1DF56 /* fushigidane_1_0.tga in Resources */,
+				786980641D4D2FB400D1DF56 /* fushigidane_0_1.tga in Resources */,
+				786980621D4D2FB400D1DF56 /* bulb.dae in Resources */,
 				78612E0D1D4A7CC3008390B6 /* LizardonEyeDh.tga in Resources */,
 				780EB5071D4583E600264EB8 /* blue-sky.jpg in Resources */,
-				78612E2A1D4BC2B4008390B6 /* PikachuHohoNl.png in Resources */,
 				78612E2F1D4BC4A8008390B6 /* pik.dae in Resources */,
-				78612E291D4BC2B4008390B6 /* PikachuEyeNl.png in Resources */,
-				78612E2B1D4BC2B4008390B6 /* PikachuMouthNl.png in Resources */,
+				78612E4B1D4D0EDD008390B6 /* PikachuSpecularNl.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
