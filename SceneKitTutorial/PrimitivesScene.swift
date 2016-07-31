@@ -9,7 +9,7 @@
 import UIKit
 import SceneKit
 
-class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
+class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactDelegate {
     
     
     //nodes
@@ -26,23 +26,42 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
     let moveDown = SCNAction.moveByX(0.0, y: -1.0, z: 0.0, duration: 0.5)
     let moveFwd1 = SCNAction.moveTo(SCNVector3( x:0, y: 4, z:-15), duration: 0.5)
     let moveFwd2 = SCNAction.moveTo(SCNVector3(x:0,y: 0.1, z:-30), duration: 0.5)
-    let moveFwd3 = SCNAction.moveTo(SCNVector3(x:0, y:-4,z:-5), duration: 0.2)
+    let moveFwd3 = SCNAction.moveTo(SCNVector3(x:0, y:-40,z:13), duration: 0.2)
     let moveFwd4 = SCNAction.moveTo(SCNVector3(x:0.0, y:0.25,z:13), duration: 0.2)
-    var sequence = SCNAction()
+    let hideCharacter = SCNAction.hide()
+    let showCharacter = SCNAction.unhide()
+    let waitForOne = SCNAction.waitForDuration(1.0)
+    let fadeOut = SCNAction.fadeOutWithDuration(1.0)
+    let fadeIn = SCNAction.fadeInWithDuration(1.0)
+    let waitForFive = SCNAction.waitForDuration(5.0)
+    let waitLonger = SCNAction.waitForDuration(5.0)
+    let removeNode = SCNAction.removeFromParentNode()
+    var sequenceBall = SCNAction()
+    var sequenceExplosion = SCNAction()
+    var sequenceForCharacter = SCNAction()
+    
     let spin = SCNAction.rotateByAngle(90, aroundAxis: SCNVector3(0.0,0.0,-5.0), duration: 0.5)
     let moveMeOnX = CABasicAnimation(keyPath: "position.x")
 //    let moveMeOnY = CABasicAnimation(keyPath: "position.y")
-    
     //let swipeRecognizer = UIPanGestureRecognizer()
-    
-    
     //moveNode.duration = 1.0
     //sinonNode.addAnimation(move, forKey: "slide right")
+    
+    //explosion particle system
+    let particleSystem = SCNParticleSystem(named: "Explosion", inDirectory: nil)
+    let explosionNode = SCNNode()
+    
+    let collisionCategoryOne = 1 << 0
+    let collisionCategoryTwo = 1 << 1
+    let collisionCategoryThree = 1 << 2
     
     override init() {
         super.init()
         
+        print("\(collisionCategoryOne) \(collisionCategoryTwo) \(collisionCategoryThree)")
+        
         self.background.contents = UIImage(named: "blue-sky.jpg")
+        physicsWorld.contactDelegate = self
         
         //floor
 //        let myFloor = SCNFloor()
@@ -81,9 +100,7 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
         spotNode.constraints = [lookAt]
         self.rootNode.addChildNode(spotNode)
         
-        moveMeOnX.byValue = -20
-        moveMeOnX.duration = 8
-        cameraNode.addAnimation(moveMeOnX, forKey: "slide right")
+        
 //        moveMeOnY.byValue = 10
 //        moveMeOnY.duration = 4
 //        cameraNode.addAnimation(moveMeOnY, forKey: "slide up")
@@ -96,53 +113,32 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
         cameraNode.position = SCNVector3Make(0, 4, 20)
         cameraNode.constraints = [lookAt]
         self.rootNode.addChildNode(cameraNode)
+        moveMeOnX.byValue = -20
+        moveMeOnX.duration = 8
+        cameraNode.addAnimation(moveMeOnX, forKey: "slide right")
         
+        //ball
         let sphereGeometry = SCNSphere(radius: 0.3)
         sphereGeometry.firstMaterial?.diffuse.contents = UIImage(named: "pokeball.png")
         sphereGeometry.firstMaterial?.lightingModelName = SCNLightingModelBlinn
-        
-        
         self.sphereNode = SCNNode(geometry: sphereGeometry)
-        self.sphereNode.position = SCNVector3(0.0, 0.25,13)
+        self.sphereNode.position = SCNVector3(0.0, 0.25, 13)
         self.rootNode.addChildNode(self.sphereNode)
         
-//        self.secondNode = SCNNode(geometry: sphereGeometry)
-//        self.secondNode.position = SCNVector3(0.0, 0.25,13)
-//        self.rootNode.addChildNode(self.secondNode)
+        //explosion
+        explosionNode.addParticleSystem(particleSystem!)
+        explosionNode.position = SCNVector3(x: 0.2, y:3.0, z:0)
+        //explosionNode.runAction(hideCharacter)
+
         
-        self.sequence = SCNAction.sequence([moveFwd1, moveFwd2,moveFwd3, moveFwd4])
-        //let repeatedSequence = SCNAction.repeatAction(sequence, count: 1)
-        
+        //action sequences
+        self.sequenceBall = SCNAction.sequence([self.moveFwd1, self.moveFwd2, self.hideCharacter, self.waitForFive, self.moveFwd3, self.moveFwd4, self.showCharacter])
+        self.sequenceExplosion = SCNAction.sequence([self.hideCharacter, self.waitForOne, self.showCharacter, self.waitForOne, self.hideCharacter])
+        self.sequenceForCharacter = SCNAction.sequence([self.waitForOne, self.fadeOut, self.waitLonger, self.fadeIn])
         
         //sphereNode.runAction(sequence)
         //sphereNode.runAction(spin)
         
-
-//
-//        let secondSphereGeometry = SCNSphere(radius: 0.5)
-//        secondSphereGeometry.firstMaterial?.diffuse.contents = UIColor.whiteColor()
-//        let secondSphereNode = SCNNode(geometry: secondSphereGeometry)
-//        secondSphereNode.position = SCNVector3(x:2.0, y:0.0, z:0.0)
-//          self.rootNode.addChildNode(secondSphereNode)
-        
-        //goal
-//        let pipeGeometry = SCNCylinder(radius: 0.2, height: 20)
-//        
-//        pipeGeometry.firstMaterial?.diffuse.contents = UIColor.whiteColor()
-//        pipeGeometry.firstMaterial?.lightingModelName = SCNLightingModelBlinn
-//        let pipe1Node = SCNNode(geometry: pipeGeometry)
-//        pipe1Node.position = SCNVector3(-10, 0.0, -21.0)
-//        self.rootNode.addChildNode(pipe1Node)
-//        
-//        let pipe2Node = SCNNode(geometry: pipeGeometry)
-//        pipe2Node.position = SCNVector3(10, 0.0, -21.0)
-//        self.rootNode.addChildNode(pipe2Node)
-//        
-//
-//        let pipe3Node = SCNNode(geometry: pipeGeometry)
-//        pipe3Node.position = SCNVector3(0, 2.0, -25.0)
-//        self.rootNode.addChildNode(pipe3Node)
-//
         //pokemon character
         let scene = SCNScene(named: "pik.dae")
         let nodeArray = scene!.rootNode.childNodes
@@ -152,11 +148,8 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
         self.rootNode.addChildNode(pokeNode)
         pokeNode.position = SCNVector3(x: 0.0, y: -0.01, z: -20.0)
         //pokeNode.physicsBody?.applyForce( SCNVector3Make( 0, 2, 0), impulse: true)
-        
         //pokeNode.orientation = SCNQuaternion(x: -0.26, y: -0.32, z: 0, w: 0.91)
         
-        //trees
-
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -178,8 +171,67 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate {
     }
     
     func shootTheBall(ball: SCNNode, velocity: CGPoint) {
-        print("x: \(velocity.x) ... y: \(velocity.y)")
-        ball.runAction(self.sequence)
+        //print("x: \(ball.physicsBody!.velocity.y) ... y: \(pokeNode.position.z)")
+        self.rootNode.addChildNode(explosionNode)
+        sphereNode.runAction(self.sequenceBall)
+        explosionNode.runAction(self.sequenceExplosion)
+        pokeNode.runAction(self.sequenceForCharacter)
     }
+    
+    func physicsBodies() {
+        //add physics bodies
+        if let floorGeometry = myFloorNode.geometry {
+            let floorShape = SCNPhysicsShape(geometry: floorGeometry, options: nil)
+            let floorBody = SCNPhysicsBody(type: .Static, shape: floorShape)
+            myFloorNode.physicsBody = floorBody
+            print("floor's physics body: \(floorBody)")
+        }
+        
+        if let sphereGeometry = sphereNode.geometry {
+            let ballPhysicsShape = SCNPhysicsShape(geometry: sphereGeometry, options: nil)
+            let sphereBody = SCNPhysicsBody(type: .Dynamic, shape: ballPhysicsShape)
+            sphereNode.physicsBody = sphereBody
+            sphereNode.physicsBody!.categoryBitMask = self.collisionCategoryOne
+            sphereNode.physicsBody!.collisionBitMask = self.collisionCategoryTwo
+            sphereNode.physicsBody!.affectedByGravity = true
+            print("ball's physics body: \(sphereBody)")
+        }
+        else {
+            print("could not get the pokeBall geometry?")
+        }
+        
+        let pokeGeometry = SCNBox(width: 4, height: 10, length: 5, chamferRadius: 0.3)
+        let pokeShape = SCNPhysicsShape(geometry: pokeGeometry, options: nil)
+        let pokeBody = SCNPhysicsBody(type: .Kinematic, shape: pokeShape)
+        pokeNode.physicsBody = pokeBody
+        pokeNode.physicsBody!.categoryBitMask = self.collisionCategoryTwo
+        pokeNode.physicsBody!.collisionBitMask = self.collisionCategoryOne
+        print("pokemon character's body: \(pokeBody)")
+    }
+    
+    func physicsWorld(world: SCNPhysicsWorld, didBeginContact contact: SCNPhysicsContact) {
+        let contactMask = contact.nodeA.physicsBody!.categoryBitMask | contact.nodeB.physicsBody!.categoryBitMask
+        if contactMask == self.collisionCategoryOne | self.collisionCategoryTwo {
+            print("collision")
+        }
+        
+        print("did the contact being?")
+    }
+    
+    func physicsWorld(world: SCNPhysicsWorld, didUpdateContact contact: SCNPhysicsContact) {
+        print("is there a contact? is there a contact? is there a contact?")
+        if (contact.nodeA == sphereNode || contact.nodeA == pokeNode) && (contact.nodeB == sphereNode || contact.nodeB == pokeNode) {
+            print("contact made")
+            let particleSystem = SCNParticleSystem(named: "Explosion", inDirectory: nil)
+            let systemNode = SCNNode()
+            systemNode.addParticleSystem(particleSystem!)
+            systemNode.position = contact.nodeA.position
+            self.rootNode.addChildNode(systemNode)
+            
+            //contact.nodeA.removeFromParentNode()
+            //contact.nodeB.removeFromParentNode()
+        }
+    }
+
     
 }
