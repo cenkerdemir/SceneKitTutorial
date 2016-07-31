@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		780B0A4C1D4D4143003A2DDC /* pik2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 780B0A4B1D4D4143003A2DDC /* pik2.dae */; };
 		780B0A4E1D4D47EC003A2DDC /* charizard.dae in Resources */ = {isa = PBXBuildFile; fileRef = 780B0A4D1D4D47EC003A2DDC /* charizard.dae */; };
-		780B0A551D4D4D71003A2DDC /* Explosion.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 780B0A531D4D4D71003A2DDC /* Explosion.scnp */; };
-		780B0A561D4D4D71003A2DDC /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 780B0A541D4D4D71003A2DDC /* spark.png */; };
 		780EB5031D450DDF00264EB8 /* stone-wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB5021D450DDF00264EB8 /* stone-wall.jpg */; };
 		780EB5071D4583E600264EB8 /* blue-sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB5061D4583E600264EB8 /* blue-sky.jpg */; };
 		782E69A51D4D312A00D207CB /* BR_Bulbasaur.png in Resources */ = {isa = PBXBuildFile; fileRef = 782E69A41D4D312A00D207CB /* BR_Bulbasaur.png */; };
@@ -46,13 +43,12 @@
 		786980671D4D2FB400D1DF56 /* FushigidaneDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = 786980601D4D2FB400D1DF56 /* FushigidaneDh.tga */; };
 		786980681D4D2FB400D1DF56 /* FushigidaneEyeDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = 786980611D4D2FB400D1DF56 /* FushigidaneEyeDh.tga */; };
 		7898233D1D478DD800FCFE04 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = 7898233C1D478DD800FCFE04 /* football.png */; };
+		78A2C0961D4EACB200ABE262 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A2C0951D4EACB200ABE262 /* spark.png */; };
+		78A2C0981D4EACBE00ABE262 /* Explosion.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 78A2C0971D4EACBE00ABE262 /* Explosion.scnp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		780B0A4B1D4D4143003A2DDC /* pik2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = pik2.dae; path = "../../../Downloads/All Pokemon/025 - Pikachu/pik2.dae"; sourceTree = "<group>"; };
 		780B0A4D1D4D47EC003A2DDC /* charizard.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = charizard.dae; path = SceneKitTutorial/charizard.dae; sourceTree = "<group>"; };
-		780B0A531D4D4D71003A2DDC /* Explosion.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = Explosion.scnp; path = ../../Explosion.scnp; sourceTree = "<group>"; };
-		780B0A541D4D4D71003A2DDC /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../../spark.png; sourceTree = "<group>"; };
 		780EB5021D450DDF00264EB8 /* stone-wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "stone-wall.jpg"; path = "SceneKitTutorial/stone-wall.jpg"; sourceTree = "<group>"; };
 		780EB5061D4583E600264EB8 /* blue-sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blue-sky.jpg"; sourceTree = "<group>"; };
 		782E69A41D4D312A00D207CB /* BR_Bulbasaur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BR_Bulbasaur.png; path = SceneKitTutorial/bulbasaur/BR_Bulbasaur.png; sourceTree = "<group>"; };
@@ -90,6 +86,8 @@
 		786980601D4D2FB400D1DF56 /* FushigidaneDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = FushigidaneDh.tga; path = SceneKitTutorial/bulbasaur/FushigidaneDh.tga; sourceTree = "<group>"; };
 		786980611D4D2FB400D1DF56 /* FushigidaneEyeDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = FushigidaneEyeDh.tga; path = SceneKitTutorial/bulbasaur/FushigidaneEyeDh.tga; sourceTree = "<group>"; };
 		7898233C1D478DD800FCFE04 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
+		78A2C0951D4EACB200ABE262 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = SceneKitTutorial/spark.png; sourceTree = "<group>"; };
+		78A2C0971D4EACBE00ABE262 /* Explosion.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = Explosion.scnp; path = SceneKitTutorial/Explosion.scnp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +105,8 @@
 		7860F5A31D422A89007E138C = {
 			isa = PBXGroup;
 			children = (
-				780B0A531D4D4D71003A2DDC /* Explosion.scnp */,
-				780B0A541D4D4D71003A2DDC /* spark.png */,
-				780B0A4B1D4D4143003A2DDC /* pik2.dae */,
+				78A2C0971D4EACBE00ABE262 /* Explosion.scnp */,
+				78A2C0951D4EACB200ABE262 /* spark.png */,
 				7869805B1D4D2FB400D1DF56 /* bulb.dae */,
 				780B0A4D1D4D47EC003A2DDC /* charizard.dae */,
 				782E69A61D4D32B700D207CB /* bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png */,
@@ -236,8 +233,9 @@
 				7860F5B51D422A89007E138C /* Main.storyboard in Resources */,
 				78612E001D4A7B55008390B6 /* sinon.dae in Resources */,
 				78612E111D4AB015008390B6 /* pokeball.png in Resources */,
-				780B0A561D4D4D71003A2DDC /* spark.png in Resources */,
+				78A2C0961D4EACB200ABE262 /* spark.png in Resources */,
 				786980671D4D2FB400D1DF56 /* FushigidaneDh.tga in Resources */,
+				78A2C0981D4EACBE00ABE262 /* Explosion.scnp in Resources */,
 				78612E4A1D4D0EDD008390B6 /* PikachuNl.png in Resources */,
 				786980681D4D2FB400D1DF56 /* FushigidaneEyeDh.tga in Resources */,
 				78612E0C1D4A7CC3008390B6 /* LizardonDh.tga in Resources */,
@@ -246,12 +244,10 @@
 				78612E461D4D0EDD008390B6 /* PikachuEnvNl.png in Resources */,
 				78612E0B1D4A7CC3008390B6 /* lizardon_1_0.tga in Resources */,
 				78612DFE1D4A7B2D008390B6 /* wood.jpg in Resources */,
-				780B0A551D4D4D71003A2DDC /* Explosion.scnp in Resources */,
 				78612E0E1D4A7CC4008390B6 /* LizardonFireWP.tga in Resources */,
 				786980661D4D2FB400D1DF56 /* fushigidane_1_1.tga in Resources */,
 				780B0A4E1D4D47EC003A2DDC /* charizard.dae in Resources */,
 				78612E481D4D0EDD008390B6 /* PikachuHohoNl.png in Resources */,
-				780B0A4C1D4D4143003A2DDC /* pik2.dae in Resources */,
 				782E69A71D4D32B700D207CB /* bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png in Resources */,
 				78612E151D4B8ACF008390B6 /* green.png in Resources */,
 				786980651D4D2FB400D1DF56 /* fushigidane_1_0.tga in Resources */,
