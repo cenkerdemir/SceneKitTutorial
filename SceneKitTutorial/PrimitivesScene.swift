@@ -11,21 +11,17 @@ import SceneKit
 
 class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactDelegate {
     
-   
-    
-    
     //nodes
     var myFloorNode = SCNNode()
     var sphereNode = SCNNode()
     
-    
     //var secondNode = SCNNode()
     let pokeNode = SCNNode()
+    let newPokeNode = SCNNode()
     let light = SCNNode()
     let cameraNode: SCNNode = SCNNode()
     let audio = SCNNode()
   
-    
     //moves/animations
     var playSwoosh = SCNAction()
     let moveUp = SCNAction.moveByX(0.0, y: 1.0, z: -5.0, duration: 0.5)
@@ -46,16 +42,9 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
     var sequenceBall = SCNAction()
     var sequenceExplosion = SCNAction()
     var sequenceForCharacter = SCNAction()
-    
-  
-   
-    
+    var sequenceForCharacterTwo = SCNAction()
     let spin = SCNAction.rotateByAngle(90, aroundAxis: SCNVector3(0.0,0.0,-5.0), duration: 0.5)
     let moveMeOnX = CABasicAnimation(keyPath: "position.x")
-//    let moveMeOnY = CABasicAnimation(keyPath: "position.y")
-    //let swipeRecognizer = UIPanGestureRecognizer()
-    //moveNode.duration = 1.0
-    //sinonNode.addAnimation(move, forKey: "slide right")
     
     //explosion particle system
     let particleSystem = SCNParticleSystem(named: "Explosion", inDirectory: nil)
@@ -67,26 +56,10 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
     
     override init() {
         super.init()
-        
-        print("\(collisionCategoryOne) \(collisionCategoryTwo) \(collisionCategoryThree)")
-        
         self.background.contents = UIImage(named: "blue-sky.jpg")
         physicsWorld.contactDelegate = self
         
-        
-        
-        
-        
         //floor
-//        let myFloor = SCNFloor()
-//        myFloor.reflectivity = 0
-//        //myFloor.reflectionFalloffEnd = 5
-//        myFloor.firstMaterial?.diffuse.contents = UIImage(named: "green.png")//UIColor.greenColor()
-//        myFloor.firstMaterial?.lightingModelName = SCNLightingModelBlinn
-//        myFloor.firstMaterial?.litPerPixel = false
-//        myFloor.firstMaterial?.diffuse.wrapS = SCNWrapMode.Repeat
-//        myFloor.firstMaterial?.diffuse.wrapT = SCNWrapMode.Repeat
-//        let myFloorNode = SCNNode(geometry: myFloor)
         myFloorNode.castsShadow = true
         myFloorNode = self.makeFloor()
         self.rootNode.addChildNode(myFloorNode)
@@ -100,7 +73,6 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         ambientLight.type = SCNLightTypeAmbient
         self.cameraNode.light = ambientLight
         
-        
         // spotLight
         let spot = SCNLight()
         spot.type = SCNLightTypeSpot
@@ -113,11 +85,6 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         spotNode.position = SCNVector3(x: 20, y: 20, z: 30)
         spotNode.constraints = [lookAt]
         self.rootNode.addChildNode(spotNode)
-        
-        
-//        moveMeOnY.byValue = 10
-//        moveMeOnY.duration = 4
-//        cameraNode.addAnimation(moveMeOnY, forKey: "slide up")
         
         //camera node
         cameraNode.camera = SCNCamera()
@@ -142,8 +109,6 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         //explosion
         explosionNode.addParticleSystem(particleSystem!)
         explosionNode.position = SCNVector3(x: 0.2, y:3.0, z:0)
-        //explosionNode.runAction(hideCharacter)
-
         
         //action sequences
         let swooshSource = SCNAudioSource(fileNamed: "flight.mp3")!
@@ -153,11 +118,6 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         self.sequenceBall = SCNAction.sequence([self.playSwoosh, self.moveFwd1, self.moveFwd2, self.hideCharacter, self.waitForFive, self.moveFwd3, self.moveFwd4, self.showCharacter])
         self.sequenceExplosion = SCNAction.sequence([self.hideCharacter, self.waitForOne, self.showCharacter, self.waitForOne, self.playExplSound, self.hideCharacter])
         self.sequenceForCharacter = SCNAction.sequence([self.waitForOne, self.fadeOut, self.waitLonger, self.fadeIn])
-        
-        
-        
-        //sphereNode.runAction(sequence)
-        //sphereNode.runAction(spin)
         
         //pokemon character
         let scene = SCNScene(named: "pik.dae")
@@ -169,7 +129,6 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         pokeNode.position = SCNVector3(x: 0.0, y: -0.01, z: -20.0)
         //pokeNode.physicsBody?.applyForce( SCNVector3Make( 0, 2, 0), impulse: true)
         //pokeNode.orientation = SCNQuaternion(x: -0.26, y: -0.32, z: 0, w: 0.91)
-        
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -198,8 +157,9 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         pokeNode.runAction(self.sequenceForCharacter)
     }
     
+     /////////////////////////////////////////////////////
+    //add physics bodies
     func physicsBodies() {
-        //add physics bodies
         if let floorGeometry = myFloorNode.geometry {
             let floorShape = SCNPhysicsShape(geometry: floorGeometry, options: nil)
             let floorBody = SCNPhysicsBody(type: .Static, shape: floorShape)
@@ -230,25 +190,27 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         
     }
     
-//    class func playAudioSource(audioSource: SCNAudioSource,
-//                               waitForCompletion wait: SCNPhysicsWorld) -> SCNAction {
-//    
-//    let audioSource = SCNAudioSource(fileNamed: "song.mp3")!
-//    let audioNode = SCNNode()
-//    let audioPlayer = SCNAudioPlayer(source: audioSource)
-//    audioNode.addAudioPlayer(audioPlayer)
-//    audioSource.positional = true
-//    audioSource.loops = false
-//    let play = SCNAction.playAudioSource(audioSource, waitForCompletion: true)
-//      audioNode.runAction(play)
-//  
-//        
-//}
-//    
-   
-
-    
-    
+                        //\\\\\
+                       ///\\\\\\
+                      ////\\\\\\\
+                     /////\\\\\\\\
+                    //////\\\\\\\\\
+                   ///////\\\\\\\\\\
+                  ////////\\\\\\\\\\\
+                 /////////\\\\\\\\\\\\
+                //////////\\\\\\\\\\\\\
+               ///////////\\\\\\\\\\\\\\
+              ////////////\\\\\\\\\\\\\\\
+             /////////////\\\\\\\\\\\\\\\\
+            //////////////\\\\\\\\\\\\\\\\\
+           ///////////////\\\\\\\\\\\\\\\\\\
+          ////////////////\\\\\\\\\\\\\\\\\\\
+         /////////////////\\\\\\\\\\\\\\\\\\\\
+        //////////////////\\\\\\\\\\\\\\\\\\\\\
+       ///////////////////\\\\\\\\\\\\\\\\\\\\\\
+      ////////////////////\\\\\\\\\\\\\\\\\\\\\\\
+     ////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
+    // physics functions - can be ignored for now\\
     
     func physicsWorld(world: SCNPhysicsWorld, didBeginContact contact: SCNPhysicsContact) {
         let contactMask = contact.nodeA.physicsBody!.categoryBitMask | contact.nodeB.physicsBody!.categoryBitMask
@@ -270,11 +232,6 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
             systemNode.position = contact.nodeA.position
             self.rootNode.addChildNode(systemNode)
 
-           
-            
-            
-            //contact.nodeA.removeFromParentNode()
-            //contact.nodeB.removeFromParentNode()
         }
     }
 

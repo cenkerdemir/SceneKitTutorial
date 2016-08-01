@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		071A2F411D4EBEC7002452E1 /* imgres-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 071A2F401D4EBEC7002452E1 /* imgres-1.jpg */; };
 		071A2F431D4EC9BA002452E1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071A2F421D4EC9BA002452E1 /* Launch Screen.storyboard */; };
 		07C391501D4FBE81000A5BD4 /* FIS_New_Logo-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C3914F1D4FBE81000A5BD4 /* FIS_New_Logo-1.png */; };
 		07C391541D4FD007000A5BD4 /* 345058__littlerainyseasons__sound-effect-magic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07C391531D4FD007000A5BD4 /* 345058__littlerainyseasons__sound-effect-magic.mp3 */; };
 		07C391561D4FD012000A5BD4 /* POL-find-the-exit-short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07C391551D4FD012000A5BD4 /* POL-find-the-exit-short.wav */; };
 		07C3915A1D4FD14D000A5BD4 /* flight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07C391591D4FD14D000A5BD4 /* flight.mp3 */; };
-		07E52CAE1D4F985A00D1180D /* POL-find-the-exit-short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07E52CAD1D4F985A00D1180D /* POL-find-the-exit-short.wav */; };
-		07E52CB01D4F9F4600D1180D /* Metal Debri Falling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07E52CAF1D4F9F4600D1180D /* Metal Debri Falling.mp3 */; };
 		780B0A4E1D4D47EC003A2DDC /* charizard.dae in Resources */ = {isa = PBXBuildFile; fileRef = 780B0A4D1D4D47EC003A2DDC /* charizard.dae */; };
 		780EB5031D450DDF00264EB8 /* stone-wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB5021D450DDF00264EB8 /* stone-wall.jpg */; };
 		780EB5071D4583E600264EB8 /* blue-sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB5061D4583E600264EB8 /* blue-sky.jpg */; };
@@ -54,14 +51,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		071A2F401D4EBEC7002452E1 /* imgres-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "imgres-1.jpg"; path = "../../../../Desktop/imgres-1.jpg"; sourceTree = "<group>"; };
 		071A2F421D4EC9BA002452E1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		07C3914F1D4FBE81000A5BD4 /* FIS_New_Logo-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FIS_New_Logo-1.png"; sourceTree = "<group>"; };
 		07C391531D4FD007000A5BD4 /* 345058__littlerainyseasons__sound-effect-magic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "345058__littlerainyseasons__sound-effect-magic.mp3"; sourceTree = "<group>"; };
 		07C391551D4FD012000A5BD4 /* POL-find-the-exit-short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "POL-find-the-exit-short.wav"; sourceTree = "<group>"; };
 		07C391591D4FD14D000A5BD4 /* flight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = flight.mp3; path = SceneKitTutorial/flight.mp3; sourceTree = "<group>"; };
-		07E52CAD1D4F985A00D1180D /* POL-find-the-exit-short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "POL-find-the-exit-short.wav"; path = "../../../../Downloads/POL-find-the-exit-short.wav"; sourceTree = "<group>"; };
-		07E52CAF1D4F9F4600D1180D /* Metal Debri Falling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Metal Debri Falling.mp3"; path = "../../../../Music/iTunes/iTunes Media/Music/Metal Debri Falling/Metal Debri Falling/Metal Debri Falling.mp3"; sourceTree = "<group>"; };
 		780B0A4D1D4D47EC003A2DDC /* charizard.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = charizard.dae; path = SceneKitTutorial/charizard.dae; sourceTree = "<group>"; };
 		780EB5021D450DDF00264EB8 /* stone-wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "stone-wall.jpg"; path = "SceneKitTutorial/stone-wall.jpg"; sourceTree = "<group>"; };
 		780EB5061D4583E600264EB8 /* blue-sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blue-sky.jpg"; sourceTree = "<group>"; };
@@ -160,21 +154,18 @@
 		7860F5AE1D422A89007E138C /* SceneKitTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				07E52CAD1D4F985A00D1180D /* POL-find-the-exit-short.wav */,
 				7860F5AF1D422A89007E138C /* AppDelegate.swift */,
 				7860F5B11D422A89007E138C /* ViewController.swift */,
 				7860F5B31D422A89007E138C /* Main.storyboard */,
 				7860F5C31D422B88007E138C /* PrimitivesScene.swift */,
 				07C391551D4FD012000A5BD4 /* POL-find-the-exit-short.wav */,
 				07C391531D4FD007000A5BD4 /* 345058__littlerainyseasons__sound-effect-magic.mp3 */,
-				07E52CAF1D4F9F4600D1180D /* Metal Debri Falling.mp3 */,
 				78612E2E1D4BC4A8008390B6 /* pik.dae */,
 				78612E141D4B8ACF008390B6 /* green.png */,
 				78612E101D4AB015008390B6 /* pokeball.png */,
 				7898233C1D478DD800FCFE04 /* football.png */,
 				780EB5061D4583E600264EB8 /* blue-sky.jpg */,
 				78612DFF1D4A7B55008390B6 /* sinon.dae */,
-				071A2F401D4EBEC7002452E1 /* imgres-1.jpg */,
 				7860F5BB1D422A89007E138C /* Info.plist */,
 				071A2F421D4EC9BA002452E1 /* Launch Screen.storyboard */,
 				07C3914F1D4FBE81000A5BD4 /* FIS_New_Logo-1.png */,
@@ -260,7 +251,6 @@
 				782E69A51D4D312A00D207CB /* BR_Bulbasaur.png in Resources */,
 				78612E461D4D0EDD008390B6 /* PikachuEnvNl.png in Resources */,
 				07C391501D4FBE81000A5BD4 /* FIS_New_Logo-1.png in Resources */,
-				071A2F411D4EBEC7002452E1 /* imgres-1.jpg in Resources */,
 				78612E0B1D4A7CC3008390B6 /* lizardon_1_0.tga in Resources */,
 				78612DFE1D4A7B2D008390B6 /* wood.jpg in Resources */,
 				78612E0E1D4A7CC4008390B6 /* LizardonFireWP.tga in Resources */,
@@ -276,11 +266,9 @@
 				786980621D4D2FB400D1DF56 /* bulb.dae in Resources */,
 				78612E0D1D4A7CC3008390B6 /* LizardonEyeDh.tga in Resources */,
 				780EB5071D4583E600264EB8 /* blue-sky.jpg in Resources */,
-				07E52CAE1D4F985A00D1180D /* POL-find-the-exit-short.wav in Resources */,
 				78612E2F1D4BC4A8008390B6 /* pik.dae in Resources */,
 				78612E4B1D4D0EDD008390B6 /* PikachuSpecularNl.png in Resources */,
 				07C3915A1D4FD14D000A5BD4 /* flight.mp3 in Resources */,
-				07E52CB01D4F9F4600D1180D /* Metal Debri Falling.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +387,6 @@
 		7860F5BF1D422A89007E138C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SceneKitTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Cenker.Demir.SceneKitTutorial;
@@ -411,7 +398,6 @@
 		7860F5C01D422A89007E138C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SceneKitTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Cenker.Demir.SceneKitTutorial;
