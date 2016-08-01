@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071A2F411D4EBEC7002452E1 /* imgres-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 071A2F401D4EBEC7002452E1 /* imgres-1.jpg */; };
+		071A2F431D4EC9BA002452E1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071A2F421D4EC9BA002452E1 /* Launch Screen.storyboard */; };
+		07C391501D4FBE81000A5BD4 /* FIS_New_Logo-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C3914F1D4FBE81000A5BD4 /* FIS_New_Logo-1.png */; };
+		07C391541D4FD007000A5BD4 /* 345058__littlerainyseasons__sound-effect-magic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07C391531D4FD007000A5BD4 /* 345058__littlerainyseasons__sound-effect-magic.mp3 */; };
+		07C391561D4FD012000A5BD4 /* POL-find-the-exit-short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07C391551D4FD012000A5BD4 /* POL-find-the-exit-short.wav */; };
+		07C3915A1D4FD14D000A5BD4 /* flight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07C391591D4FD14D000A5BD4 /* flight.mp3 */; };
+		07E52CAE1D4F985A00D1180D /* POL-find-the-exit-short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07E52CAD1D4F985A00D1180D /* POL-find-the-exit-short.wav */; };
+		07E52CB01D4F9F4600D1180D /* Metal Debri Falling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07E52CAF1D4F9F4600D1180D /* Metal Debri Falling.mp3 */; };
 		780B0A4E1D4D47EC003A2DDC /* charizard.dae in Resources */ = {isa = PBXBuildFile; fileRef = 780B0A4D1D4D47EC003A2DDC /* charizard.dae */; };
 		780EB5031D450DDF00264EB8 /* stone-wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB5021D450DDF00264EB8 /* stone-wall.jpg */; };
 		780EB5071D4583E600264EB8 /* blue-sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780EB5061D4583E600264EB8 /* blue-sky.jpg */; };
@@ -15,8 +23,6 @@
 		7860F5B01D422A89007E138C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860F5AF1D422A89007E138C /* AppDelegate.swift */; };
 		7860F5B21D422A89007E138C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860F5B11D422A89007E138C /* ViewController.swift */; };
 		7860F5B51D422A89007E138C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7860F5B31D422A89007E138C /* Main.storyboard */; };
-		7860F5B71D422A89007E138C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7860F5B61D422A89007E138C /* Assets.xcassets */; };
-		7860F5BA1D422A89007E138C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7860F5B81D422A89007E138C /* LaunchScreen.storyboard */; };
 		7860F5C21D422AA0007E138C /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7860F5C11D422AA0007E138C /* SceneKit.framework */; };
 		7860F5C41D422B88007E138C /* PrimitivesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860F5C31D422B88007E138C /* PrimitivesScene.swift */; };
 		78612DFE1D4A7B2D008390B6 /* wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78612DFD1D4A7B2D008390B6 /* wood.jpg */; };
@@ -48,6 +54,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071A2F401D4EBEC7002452E1 /* imgres-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "imgres-1.jpg"; path = "../../../../Desktop/imgres-1.jpg"; sourceTree = "<group>"; };
+		071A2F421D4EC9BA002452E1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		07C3914F1D4FBE81000A5BD4 /* FIS_New_Logo-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FIS_New_Logo-1.png"; sourceTree = "<group>"; };
+		07C391531D4FD007000A5BD4 /* 345058__littlerainyseasons__sound-effect-magic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "345058__littlerainyseasons__sound-effect-magic.mp3"; sourceTree = "<group>"; };
+		07C391551D4FD012000A5BD4 /* POL-find-the-exit-short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "POL-find-the-exit-short.wav"; sourceTree = "<group>"; };
+		07C391591D4FD14D000A5BD4 /* flight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = flight.mp3; path = SceneKitTutorial/flight.mp3; sourceTree = "<group>"; };
+		07E52CAD1D4F985A00D1180D /* POL-find-the-exit-short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "POL-find-the-exit-short.wav"; path = "../../../../Downloads/POL-find-the-exit-short.wav"; sourceTree = "<group>"; };
+		07E52CAF1D4F9F4600D1180D /* Metal Debri Falling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Metal Debri Falling.mp3"; path = "../../../../Music/iTunes/iTunes Media/Music/Metal Debri Falling/Metal Debri Falling/Metal Debri Falling.mp3"; sourceTree = "<group>"; };
 		780B0A4D1D4D47EC003A2DDC /* charizard.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = charizard.dae; path = SceneKitTutorial/charizard.dae; sourceTree = "<group>"; };
 		780EB5021D450DDF00264EB8 /* stone-wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "stone-wall.jpg"; path = "SceneKitTutorial/stone-wall.jpg"; sourceTree = "<group>"; };
 		780EB5061D4583E600264EB8 /* blue-sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blue-sky.jpg"; sourceTree = "<group>"; };
@@ -57,8 +71,6 @@
 		7860F5AF1D422A89007E138C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7860F5B11D422A89007E138C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7860F5B41D422A89007E138C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7860F5B61D422A89007E138C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7860F5B91D422A89007E138C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7860F5BB1D422A89007E138C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7860F5C11D422AA0007E138C /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		7860F5C31D422B88007E138C /* PrimitivesScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitivesScene.swift; sourceTree = "<group>"; };
@@ -105,6 +117,7 @@
 		7860F5A31D422A89007E138C = {
 			isa = PBXGroup;
 			children = (
+				07C391591D4FD14D000A5BD4 /* flight.mp3 */,
 				78A2C0971D4EACBE00ABE262 /* Explosion.scnp */,
 				78A2C0951D4EACB200ABE262 /* spark.png */,
 				7869805B1D4D2FB400D1DF56 /* bulb.dae */,
@@ -147,19 +160,24 @@
 		7860F5AE1D422A89007E138C /* SceneKitTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				07E52CAD1D4F985A00D1180D /* POL-find-the-exit-short.wav */,
 				7860F5AF1D422A89007E138C /* AppDelegate.swift */,
 				7860F5B11D422A89007E138C /* ViewController.swift */,
 				7860F5B31D422A89007E138C /* Main.storyboard */,
 				7860F5C31D422B88007E138C /* PrimitivesScene.swift */,
+				07C391551D4FD012000A5BD4 /* POL-find-the-exit-short.wav */,
+				07C391531D4FD007000A5BD4 /* 345058__littlerainyseasons__sound-effect-magic.mp3 */,
+				07E52CAF1D4F9F4600D1180D /* Metal Debri Falling.mp3 */,
 				78612E2E1D4BC4A8008390B6 /* pik.dae */,
 				78612E141D4B8ACF008390B6 /* green.png */,
 				78612E101D4AB015008390B6 /* pokeball.png */,
 				7898233C1D478DD800FCFE04 /* football.png */,
 				780EB5061D4583E600264EB8 /* blue-sky.jpg */,
 				78612DFF1D4A7B55008390B6 /* sinon.dae */,
-				7860F5B61D422A89007E138C /* Assets.xcassets */,
-				7860F5B81D422A89007E138C /* LaunchScreen.storyboard */,
+				071A2F401D4EBEC7002452E1 /* imgres-1.jpg */,
 				7860F5BB1D422A89007E138C /* Info.plist */,
+				071A2F421D4EC9BA002452E1 /* Launch Screen.storyboard */,
+				07C3914F1D4FBE81000A5BD4 /* FIS_New_Logo-1.png */,
 			);
 			path = SceneKitTutorial;
 			sourceTree = "<group>";
@@ -226,14 +244,13 @@
 				7898233D1D478DD800FCFE04 /* football.png in Resources */,
 				78612E491D4D0EDD008390B6 /* PikachuMouthNl.png in Resources */,
 				786980631D4D2FB400D1DF56 /* fushigidane_0_0.tga in Resources */,
-				7860F5BA1D422A89007E138C /* LaunchScreen.storyboard in Resources */,
 				78612E0A1D4A7CC3008390B6 /* lizardon_0_0.tga in Resources */,
-				7860F5B71D422A89007E138C /* Assets.xcassets in Resources */,
 				780EB5031D450DDF00264EB8 /* stone-wall.jpg in Resources */,
 				7860F5B51D422A89007E138C /* Main.storyboard in Resources */,
 				78612E001D4A7B55008390B6 /* sinon.dae in Resources */,
 				78612E111D4AB015008390B6 /* pokeball.png in Resources */,
 				78A2C0961D4EACB200ABE262 /* spark.png in Resources */,
+				07C391541D4FD007000A5BD4 /* 345058__littlerainyseasons__sound-effect-magic.mp3 in Resources */,
 				786980671D4D2FB400D1DF56 /* FushigidaneDh.tga in Resources */,
 				78A2C0981D4EACBE00ABE262 /* Explosion.scnp in Resources */,
 				78612E4A1D4D0EDD008390B6 /* PikachuNl.png in Resources */,
@@ -242,21 +259,28 @@
 				78612E471D4D0EDD008390B6 /* PikachuEyeNl.png in Resources */,
 				782E69A51D4D312A00D207CB /* BR_Bulbasaur.png in Resources */,
 				78612E461D4D0EDD008390B6 /* PikachuEnvNl.png in Resources */,
+				07C391501D4FBE81000A5BD4 /* FIS_New_Logo-1.png in Resources */,
+				071A2F411D4EBEC7002452E1 /* imgres-1.jpg in Resources */,
 				78612E0B1D4A7CC3008390B6 /* lizardon_1_0.tga in Resources */,
 				78612DFE1D4A7B2D008390B6 /* wood.jpg in Resources */,
 				78612E0E1D4A7CC4008390B6 /* LizardonFireWP.tga in Resources */,
 				786980661D4D2FB400D1DF56 /* fushigidane_1_1.tga in Resources */,
+				07C391561D4FD012000A5BD4 /* POL-find-the-exit-short.wav in Resources */,
 				780B0A4E1D4D47EC003A2DDC /* charizard.dae in Resources */,
 				78612E481D4D0EDD008390B6 /* PikachuHohoNl.png in Resources */,
 				782E69A71D4D32B700D207CB /* bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png in Resources */,
 				78612E151D4B8ACF008390B6 /* green.png in Resources */,
 				786980651D4D2FB400D1DF56 /* fushigidane_1_0.tga in Resources */,
 				786980641D4D2FB400D1DF56 /* fushigidane_0_1.tga in Resources */,
+				071A2F431D4EC9BA002452E1 /* Launch Screen.storyboard in Resources */,
 				786980621D4D2FB400D1DF56 /* bulb.dae in Resources */,
 				78612E0D1D4A7CC3008390B6 /* LizardonEyeDh.tga in Resources */,
 				780EB5071D4583E600264EB8 /* blue-sky.jpg in Resources */,
+				07E52CAE1D4F985A00D1180D /* POL-find-the-exit-short.wav in Resources */,
 				78612E2F1D4BC4A8008390B6 /* pik.dae in Resources */,
 				78612E4B1D4D0EDD008390B6 /* PikachuSpecularNl.png in Resources */,
+				07C3915A1D4FD14D000A5BD4 /* flight.mp3 in Resources */,
+				07E52CB01D4F9F4600D1180D /* Metal Debri Falling.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,14 +306,6 @@
 				7860F5B41D422A89007E138C /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7860F5B81D422A89007E138C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7860F5B91D422A89007E138C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
