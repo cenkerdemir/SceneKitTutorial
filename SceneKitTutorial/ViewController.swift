@@ -21,39 +21,30 @@ class ViewController: UIViewController, SCNPhysicsContactDelegate {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         
         scnView = self.view as! SCNView
         scnView.scene = primScn
-        
         
         swipeRecognizer.addTarget(self, action: #selector(sceneSwiped))
         scnView.addGestureRecognizer(swipeRecognizer)
         
         //create physics bodies for the floor, character, and the ball
         primScn.physicsBodies()
-
-//        scnView.allowsCameraControl = true
         
-    }
-    
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    override func viewWillLayoutSubviews() {
         let bgMusicURL:NSURL = NSBundle.mainBundle().URLForResource("POL-find-the-exit-short", withExtension: "wav")!
         backgroundMusic = try! AVAudioPlayer(contentsOfURL: bgMusicURL)
         //backgroundMusic.numberOfLoops = -1
         backgroundMusic.prepareToPlay()
-        backgroundMusic.volume = 1.0
+        backgroundMusic.volume = 0.6
         backgroundMusic.play()
         audioPlayerTimer = NSTimer.scheduledTimerWithTimeInterval(7, target: self, selector: #selector(stopAfter3seconds), userInfo: nil, repeats: false)
+        
+      //scnView.allowsCameraControl = true
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func sceneSwiped(recognizer: UISwipeGestureRecognizer) {
@@ -63,7 +54,7 @@ class ViewController: UIViewController, SCNPhysicsContactDelegate {
     
     func stopAfter3seconds(){
         while backgroundMusic.volume > 0 {
-            backgroundMusic.volume -= 0.000001
+            backgroundMusic.volume -= 0.00001
         }
         backgroundMusic.stop()
     }

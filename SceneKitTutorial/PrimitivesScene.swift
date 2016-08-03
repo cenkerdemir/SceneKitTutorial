@@ -14,14 +14,11 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
     //nodes
     var myFloorNode = SCNNode()
     var sphereNode = SCNNode()
-    
-    //var secondNode = SCNNode()
     let pokeNode = SCNNode()
-    let newPokeNode = SCNNode()
     let light = SCNNode()
     let cameraNode: SCNNode = SCNNode()
     let audio = SCNNode()
-  
+    
     //moves/animations
     var playSwoosh = SCNAction()
     let moveUp = SCNAction.moveByX(0.0, y: 1.0, z: -5.0, duration: 0.5)
@@ -42,14 +39,13 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
     var sequenceBall = SCNAction()
     var sequenceExplosion = SCNAction()
     var sequenceForCharacter = SCNAction()
-    var sequenceForCharacterTwo = SCNAction()
-    let spin = SCNAction.rotateByAngle(90, aroundAxis: SCNVector3(0.0,0.0,-5.0), duration: 0.5)
     let moveMeOnX = CABasicAnimation(keyPath: "position.x")
     
     //explosion particle system
     let particleSystem = SCNParticleSystem(named: "Explosion", inDirectory: nil)
     let explosionNode = SCNNode()
     
+    //physics-collision-bitmasks
     let collisionCategoryOne = 1 << 0
     let collisionCategoryTwo = 1 << 1
     let collisionCategoryThree = 1 << 2
@@ -112,23 +108,26 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         
         //action sequences
         let swooshSource = SCNAudioSource(fileNamed: "flight.mp3")!
+        swooshSource.volume = 0.4
          self.playSwoosh = SCNAction.playAudioSource(swooshSource, waitForCompletion: false)
         let audioSource = SCNAudioSource(fileNamed: "345058__littlerainyseasons__sound-effect-magic.mp3")!
+        audioSource.volume = 0.4
         self.playExplSound = SCNAction.playAudioSource(audioSource, waitForCompletion: true)
         self.sequenceBall = SCNAction.sequence([self.playSwoosh, self.moveFwd1, self.moveFwd2, self.hideCharacter, self.waitForFive, self.moveFwd3, self.moveFwd4, self.showCharacter])
-        self.sequenceExplosion = SCNAction.sequence([self.hideCharacter, self.waitForOne, self.showCharacter, self.waitForOne, self.playExplSound, self.hideCharacter])
+        self.sequenceExplosion = SCNAction.sequence([self.hideCharacter, self.waitForOne, self.showCharacter, self.playExplSound, self.hideCharacter])
         self.sequenceForCharacter = SCNAction.sequence([self.waitForOne, self.fadeOut, self.waitLonger, self.fadeIn])
         
-        //pokemon character
-        let scene = SCNScene(named: "pik.dae")
+        //creating the pokemon character
+        //let scene = SCNScene(named: "pik.dae")
+        //let scene = SCNScene(named: "bulb.dae")
+        let scene = SCNScene(named: "charizard.dae")
+        //let scene = SCNScene(named: "Iron_Man_mark_7.dae")
         let nodeArray = scene!.rootNode.childNodes
         for childNode in nodeArray {
             pokeNode.addChildNode(childNode)
         }
         self.rootNode.addChildNode(pokeNode)
         pokeNode.position = SCNVector3(x: 0.0, y: -0.01, z: -20.0)
-        //pokeNode.physicsBody?.applyForce( SCNVector3Make( 0, 2, 0), impulse: true)
-        //pokeNode.orientation = SCNQuaternion(x: -0.26, y: -0.32, z: 0, w: 0.91)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -141,7 +140,6 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         let floorNode = SCNNode()
         floorNode.geometry = floor
         let floorMaterial = SCNMaterial()
-        //floorMaterial.litPerPixel = false
         floorMaterial.diffuse.contents = UIImage(named:"green.png")
         floorMaterial.diffuse.wrapS = SCNWrapMode.Repeat
         floorMaterial.diffuse.wrapT = SCNWrapMode.Repeat
@@ -166,7 +164,6 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
             myFloorNode.physicsBody = floorBody
             //print("floor's physics body: \(floorBody)")
         }
-        
         if let sphereGeometry = sphereNode.geometry {
             let ballPhysicsShape = SCNPhysicsShape(geometry: sphereGeometry, options: nil)
             let sphereBody = SCNPhysicsBody(type: .Dynamic, shape: ballPhysicsShape)
@@ -179,7 +176,6 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         else {
             //print("could not get the pokeBall geometry?")
         }
-        
         let pokeGeometry = SCNBox(width: 4, height: 10, length: 5, chamferRadius: 0.3)
         let pokeShape = SCNPhysicsShape(geometry: pokeGeometry, options: nil)
         let pokeBody = SCNPhysicsBody(type: .Kinematic, shape: pokeShape)
@@ -187,37 +183,14 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
         pokeNode.physicsBody!.categoryBitMask = self.collisionCategoryTwo
         pokeNode.physicsBody!.collisionBitMask = self.collisionCategoryOne
         //print("pokemon character's body: \(pokeBody)")
-        
     }
     
-                        //\\\\\
-                       ///\\\\\\
-                      ////\\\\\\\
-                     /////\\\\\\\\
-                    //////\\\\\\\\\
-                   ///////\\\\\\\\\\
-                  ////////\\\\\\\\\\\
-                 /////////\\\\\\\\\\\\
-                //////////\\\\\\\\\\\\\
-               ///////////\\\\\\\\\\\\\\
-              ////////////\\\\\\\\\\\\\\\
-             /////////////\\\\\\\\\\\\\\\\
-            //////////////\\\\\\\\\\\\\\\\\
-           ///////////////\\\\\\\\\\\\\\\\\\
-          ////////////////\\\\\\\\\\\\\\\\\\\
-         /////////////////\\\\\\\\\\\\\\\\\\\\
-        //////////////////\\\\\\\\\\\\\\\\\\\\\
-       ///////////////////\\\\\\\\\\\\\\\\\\\\\\
-      ////////////////////\\\\\\\\\\\\\\\\\\\\\\\
-     ////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
-    // physics functions - can be ignored for now\\
-    
+    // all physics functions - can be ignored for now
     func physicsWorld(world: SCNPhysicsWorld, didBeginContact contact: SCNPhysicsContact) {
         let contactMask = contact.nodeA.physicsBody!.categoryBitMask | contact.nodeB.physicsBody!.categoryBitMask
         if contactMask == self.collisionCategoryOne | self.collisionCategoryTwo {
             print("collision")
         }
-        
         print("did the contact being?")
     }
     
@@ -231,7 +204,6 @@ class PrimitivesScene: SCNScene, UIGestureRecognizerDelegate, SCNPhysicsContactD
             systemNode.addParticleSystem(particleSystem!)
             systemNode.position = contact.nodeA.position
             self.rootNode.addChildNode(systemNode)
-
         }
     }
 

@@ -48,6 +48,7 @@
 		7898233D1D478DD800FCFE04 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = 7898233C1D478DD800FCFE04 /* football.png */; };
 		78A2C0961D4EACB200ABE262 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A2C0951D4EACB200ABE262 /* spark.png */; };
 		78A2C0981D4EACBE00ABE262 /* Explosion.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 78A2C0971D4EACBE00ABE262 /* Explosion.scnp */; };
+		78C1F8D71D504CDD00AFEBDD /* Iron_Man_mark_7.dae in Resources */ = {isa = PBXBuildFile; fileRef = 78C1F8D61D504CDD00AFEBDD /* Iron_Man_mark_7.dae */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		7898233C1D478DD800FCFE04 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		78A2C0951D4EACB200ABE262 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = SceneKitTutorial/spark.png; sourceTree = "<group>"; };
 		78A2C0971D4EACBE00ABE262 /* Explosion.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = Explosion.scnp; path = SceneKitTutorial/Explosion.scnp; sourceTree = "<group>"; };
+		78C1F8D61D504CDD00AFEBDD /* Iron_Man_mark_7.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Iron_Man_mark_7.dae; path = SceneKitTutorial/Iron_Man_mark_7.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,32 +113,7 @@
 		7860F5A31D422A89007E138C = {
 			isa = PBXGroup;
 			children = (
-				07C391591D4FD14D000A5BD4 /* flight.mp3 */,
-				78A2C0971D4EACBE00ABE262 /* Explosion.scnp */,
-				78A2C0951D4EACB200ABE262 /* spark.png */,
-				7869805B1D4D2FB400D1DF56 /* bulb.dae */,
-				780B0A4D1D4D47EC003A2DDC /* charizard.dae */,
-				782E69A61D4D32B700D207CB /* bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png */,
-				782E69A41D4D312A00D207CB /* BR_Bulbasaur.png */,
-				7869805C1D4D2FB400D1DF56 /* fushigidane_0_0.tga */,
-				7869805D1D4D2FB400D1DF56 /* fushigidane_0_1.tga */,
-				7869805E1D4D2FB400D1DF56 /* fushigidane_1_0.tga */,
-				7869805F1D4D2FB400D1DF56 /* fushigidane_1_1.tga */,
-				786980601D4D2FB400D1DF56 /* FushigidaneDh.tga */,
-				786980611D4D2FB400D1DF56 /* FushigidaneEyeDh.tga */,
-				78612E401D4D0EDD008390B6 /* PikachuEnvNl.png */,
-				78612E411D4D0EDD008390B6 /* PikachuEyeNl.png */,
-				78612E421D4D0EDD008390B6 /* PikachuHohoNl.png */,
-				78612E431D4D0EDD008390B6 /* PikachuMouthNl.png */,
-				78612E441D4D0EDD008390B6 /* PikachuNl.png */,
-				78612E451D4D0EDD008390B6 /* PikachuSpecularNl.png */,
-				78612E051D4A7CC3008390B6 /* lizardon_0_0.tga */,
-				78612E061D4A7CC3008390B6 /* lizardon_1_0.tga */,
-				78612E071D4A7CC3008390B6 /* LizardonDh.tga */,
-				78612E081D4A7CC3008390B6 /* LizardonEyeDh.tga */,
-				78612E091D4A7CC3008390B6 /* LizardonFireWP.tga */,
-				780EB5021D450DDF00264EB8 /* stone-wall.jpg */,
-				78612DFD1D4A7B2D008390B6 /* wood.jpg */,
+				78FA0A621D51278A00563417 /* assets */,
 				7860F5C11D422AA0007E138C /* SceneKit.framework */,
 				7860F5AE1D422A89007E138C /* SceneKitTutorial */,
 				7860F5AD1D422A89007E138C /* Products */,
@@ -171,6 +148,40 @@
 				07C3914F1D4FBE81000A5BD4 /* FIS_New_Logo-1.png */,
 			);
 			path = SceneKitTutorial;
+			sourceTree = "<group>";
+		};
+		78FA0A621D51278A00563417 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				78C1F8D61D504CDD00AFEBDD /* Iron_Man_mark_7.dae */,
+				07C391591D4FD14D000A5BD4 /* flight.mp3 */,
+				78A2C0971D4EACBE00ABE262 /* Explosion.scnp */,
+				78A2C0951D4EACB200ABE262 /* spark.png */,
+				7869805B1D4D2FB400D1DF56 /* bulb.dae */,
+				780B0A4D1D4D47EC003A2DDC /* charizard.dae */,
+				782E69A61D4D32B700D207CB /* bulbasaur_minimalist_wallpaper_by_rich_q-d7bdg80.png */,
+				782E69A41D4D312A00D207CB /* BR_Bulbasaur.png */,
+				7869805C1D4D2FB400D1DF56 /* fushigidane_0_0.tga */,
+				7869805D1D4D2FB400D1DF56 /* fushigidane_0_1.tga */,
+				7869805E1D4D2FB400D1DF56 /* fushigidane_1_0.tga */,
+				7869805F1D4D2FB400D1DF56 /* fushigidane_1_1.tga */,
+				786980601D4D2FB400D1DF56 /* FushigidaneDh.tga */,
+				786980611D4D2FB400D1DF56 /* FushigidaneEyeDh.tga */,
+				78612E401D4D0EDD008390B6 /* PikachuEnvNl.png */,
+				78612E411D4D0EDD008390B6 /* PikachuEyeNl.png */,
+				78612E421D4D0EDD008390B6 /* PikachuHohoNl.png */,
+				78612E431D4D0EDD008390B6 /* PikachuMouthNl.png */,
+				78612E441D4D0EDD008390B6 /* PikachuNl.png */,
+				78612E451D4D0EDD008390B6 /* PikachuSpecularNl.png */,
+				78612E051D4A7CC3008390B6 /* lizardon_0_0.tga */,
+				78612E061D4A7CC3008390B6 /* lizardon_1_0.tga */,
+				78612E071D4A7CC3008390B6 /* LizardonDh.tga */,
+				78612E081D4A7CC3008390B6 /* LizardonEyeDh.tga */,
+				78612E091D4A7CC3008390B6 /* LizardonFireWP.tga */,
+				780EB5021D450DDF00264EB8 /* stone-wall.jpg */,
+				78612DFD1D4A7B2D008390B6 /* wood.jpg */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 				78A2C0981D4EACBE00ABE262 /* Explosion.scnp in Resources */,
 				78612E4A1D4D0EDD008390B6 /* PikachuNl.png in Resources */,
 				786980681D4D2FB400D1DF56 /* FushigidaneEyeDh.tga in Resources */,
+				78C1F8D71D504CDD00AFEBDD /* Iron_Man_mark_7.dae in Resources */,
 				78612E0C1D4A7CC3008390B6 /* LizardonDh.tga in Resources */,
 				78612E471D4D0EDD008390B6 /* PikachuEyeNl.png in Resources */,
 				782E69A51D4D312A00D207CB /* BR_Bulbasaur.png in Resources */,
